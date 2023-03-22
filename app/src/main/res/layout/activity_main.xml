@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main"
+    tools:context=".activity.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="220dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/btnshape"
+        android:elevation="7dp"
+        android:gravity="center"
+        android:text="Go to message"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/editTextMsg"
+        android:layout_width="310dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edit_texts"
+        android:elevation="7dp"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="  Menssagem"
+        android:inputType="textMultiLine"
+        android:maxLines="7"
+        android:padding="4dp"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/edit_texts"
+        android:elevation="7dp"
+        android:ems="10"
+        android:gravity="center|start"
+        android:hint="  Numero ex: 5551 900000000"
+        android:inputType="number|text"
+        android:maxLength="18"
+        android:padding="1dp"
+        android:paddingStart="8dp"
+        android:text="5551"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonInitConvers"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:elevation="7dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/btnshape"
+        android:onClick="iniciarMsg"
+        android:text="Iniciar Conversa"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMsg"
+        app:rippleColor="@color/purple_700" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/logowhats" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
